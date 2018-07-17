@@ -1,0 +1,63 @@
+{
+  "name": "@cognosante/react-app",
+  "version": "0.0.20",
+  "description": "React application with bundled in security and basic routing",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack --watch --display-error-details --display-modules --mode none",
+    "lint": "node ./node_modules/eslint/bin/eslint.js design --ext js,jsx  ./src",
+    "build": "rm -rf lib && webpack --display-error-details --display-modules --mode production",
+    "transpile": "rm -rf lib && babel src -d lib --copy-files",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-apii"
+  },
+  "keywords": ["react", "esante"],
+  "author": "Cognosante",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
+    "axios": "^0.18.0",
+    "debug": "^3.1.0",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.1",
+    "lodash": "^4.17.5",
+    "oidc-client": "^1.4.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.3.2",
+    "react-idle-timer": "^3.0.0",
+    "react-router": "^3.0.0",
+    "react-router-bootstrap": "0.23.3",
+    "react-router-dom": "^4.2.2",
+    "url": "^0.11.0",
+    "url-join": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
